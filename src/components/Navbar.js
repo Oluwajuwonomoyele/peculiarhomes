@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { HiMenuAlt3, HiHome, HiUser } from "react-icons/hi";
 
-const Navbar = ({handleClick}) => {
+const Navbar = ({handleClick, handleClose}) => {
     return (  
         <header className="bg-white fixed z-40 w-full">
             <div className="max-w-[1440px] mx-auto px-4 py-6 flex gap-4 items-center">
@@ -18,7 +18,7 @@ const Navbar = ({handleClick}) => {
                         </div>
                     </Link>
 
-                    <div className='bg-secondary p-2 rounded-full text-white text-xl cursor-pointer lg:hidden'>
+                    <div className='bg-secondary p-2 rounded-full text-white text-xl cursor-pointer lg:hidden' onClick={() => {handleClose()}}>
                         <HiUser />
                     </div>
                 </div>
