@@ -9,18 +9,12 @@ import { useEffect } from 'react';
 const PropertyDetails = () => {
     const { id } = useParams()
 
-    // useEffect(() => {
-    //     window.addEventListener('scroll', () => {
-    //         window.scrollTo(0,0)
-    //     })
-    // }, [])
-
     const house = housesData.find(house => {
         return house.id === parseInt(id)
     })
 
     return (  
-       <section>
+       <section className='pt-[84px]'>
         <div className='max-w-[1440px] mx-auto px-4 py-6 flex flex-col gap-4'>
             <div className='flex flex-col gap-4 lg:gap-0 lg:flex-row lg:items-center lg:justify-between'>
                 <div>

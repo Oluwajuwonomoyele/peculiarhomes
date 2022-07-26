@@ -27,6 +27,10 @@ function App() {
     setOpen(!open)
   }
 
+  const scrollHome = () => {
+    window.scrollTo(0,0)
+}
+
   return (
     <div className='relative'>
       <HouseContextProvider>
@@ -117,12 +121,13 @@ function App() {
               </div>
             </div>
           </div>
-          <Navbar handleClick={handleClick} handleClose={handleClose}/>
+          
+          <Navbar handleClick={handleClick} handleClose={handleClose} scrollHome={scrollHome}/>
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Home scrollHome={scrollHome}/>} />
             <Route path='/property/:id' element={<PropertyDetails />} />
           </Routes>
-          <Footer />
+          <Footer scrollHome={scrollHome}/>
         </Router>
       </HouseContextProvider>
     </div>

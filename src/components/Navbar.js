@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { HiMenuAlt3, HiHome, HiUser } from "react-icons/hi";
 
-const Navbar = ({handleClick, handleClose}) => {
+const Navbar = ({handleClick, handleClose, scrollHome}) => {
     return (  
         <header className="bg-white fixed z-40 w-full">
             <div className="max-w-[1440px] mx-auto px-4 py-6 flex gap-4 items-center">
@@ -11,7 +11,7 @@ const Navbar = ({handleClick, handleClose}) => {
                 </div>
 
                 <div className='flex items-center justify-between w-full'>
-                    <Link to='/' className='font-semibold text-xl flex items-center'>
+                    <Link onClick={() => {scrollHome()}} to='/' className='font-semibold text-xl flex items-center'>
                         <HiHome className='text-secondary'/>
                         <div>
                         <span className='text-secondary'>peculiar</span>homes<span className='text-secondary'>.</span>

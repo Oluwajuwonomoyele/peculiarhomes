@@ -1,11 +1,11 @@
 import Hero from "../components/Hero";
 import HouseList from "../components/HouseList";
 
-const Home = () => {
+const Home = ({scrollHome}) => {
     return (  
         <>
             <Hero />
-            <HouseList />
+            <HouseList scrollHome={scrollHome} />
         </>
     );
 }

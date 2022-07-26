@@ -9,7 +9,7 @@ import { ImSpinner2 } from 'react-icons/im';
 import House from "./House";
 
 
-const HouseList = () => {
+const HouseList = ({scrollHome}) => {
     const { houses, loading, setLoading} = useContext(HouseContext); 
 
     if(loading){
@@ -30,7 +30,7 @@ const HouseList = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-14">
                     { houses.map((house, index) => {
                         return (
-                            <Link to={`/property/${house.id}`} key={index}><House house={house}/> </Link>
+                            <Link onClick={() => {scrollHome()}} to={`/property/${house.id}`} key={index}><House house={house}/> </Link>
                         )
                     })}
                 </div>
