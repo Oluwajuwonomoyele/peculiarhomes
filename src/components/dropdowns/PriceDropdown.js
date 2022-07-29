@@ -47,7 +47,7 @@ const PriceDropdown = () => {
             <Menu.Items className='dropdown-menu'>
                 {prices.map((price, index) => {
                         return (
-                        <Menu.Item onClick={() => {setPrice(price.value)}} className='cursor=pointer hover:text-violet-700 transition ease-linear duration-200ms w-full' as='li' key={index}>
+                        <Menu.Item onClick={() => {setPrice(price.value); setOpen(false)}} className='cursor=pointer hover:text-violet-700 transition ease-linear duration-200ms w-full' as='li' key={index}>
                             {price.value}
                         </Menu.Item>)})}
             </Menu.Items>

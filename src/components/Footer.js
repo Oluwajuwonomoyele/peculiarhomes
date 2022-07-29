@@ -8,7 +8,7 @@ const Footer = ({scrollHome}) => {
     return (  
         <footer className="bg-black">
             <div className="max-w-[1440px] mx-auto px-4 py-12 text-white text-center flex flex-col items-center gap-12">
-                 <Link onClick={() => {scrollHome()}} to='/' className='font-semibold text-xl flex items-center'>
+                 <Link onClick={() => {scrollHome()}} to='/' className='font-semibold text-xl lg:text-2xl flex items-center'>
                     <HiHome className='text-secondary'/>
                     <div>
                     <span className='text-secondary'>peculiar</span>homes<span className='text-secondary'>.</span>
@@ -49,20 +49,20 @@ const Footer = ({scrollHome}) => {
 
                 <div className="flex flex-col gap-4">
                     <div className="flex justify-center gap-4 items-center">
-                        <div className="bg-white text-primary p-1 rounded-full text-lg">
-                            <FaFacebookF />
+                        <div className="bg-white text-primary p-2 rounded-full text-lg group hover:bg-secondary trasnition ease-out duration-300ms cursor-pointer">
+                            <FaFacebookF className="group-hover:text-white"/>
                         </div>
-                        <div className="bg-white text-primary p-1 rounded-full text-lg">
-                            <FaTwitter />
+                        <div className="bg-white text-primary p-2 rounded-full text-lg group hover:bg-secondary trasnition ease-out duration-300ms cursor-pointer">
+                            <FaTwitter className="group-hover:text-white"/>
                         </div>
-                        <div className="bg-white text-primary p-1 rounded-full text-lg">
-                            <FaInstagram />
+                        <div className="bg-white text-primary p-2 rounded-full text-lg group hover:bg-secondary trasnition ease-out duration-300ms cursor-pointer">
+                            <FaInstagram className="group-hover:text-white"/>
                         </div>
-                        <div className="bg-white text-primary p-1 rounded-full text-lg">
-                            <FaLinkedinIn />
+                        <div className="bg-white text-primary p-2 rounded-full text-lg group hover:bg-secondary trasnition ease-out duration-300ms cursor-pointer">
+                            <FaLinkedinIn className="group-hover:text-white"/>
                         </div>
-                        <div className="bg-white text-primary p-1 rounded-full text-lg">
-                            <HiMail />
+                        <div className="bg-white text-primary p-2 rounded-full text-lg group hover:bg-secondary trasnition ease-out duration-300ms cursor-pointer">
+                            <HiMail className="group-hover:text-white"/>
                         </div>
                     </div>
                     <p>Copyright &copy; 2022. All rghts reserved.</p>

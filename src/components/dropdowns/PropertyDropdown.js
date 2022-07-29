@@ -27,7 +27,7 @@ const PropertyDropdown = () => {
             <Menu.Items className='dropdown-menu'>
                 {properties.map((property, index) => {
                         return (
-                        <Menu.Item onClick={() => {setProperty(property)}} className='cursor=pointer hover:text-violet-700 transition ease-linear duration-200ms w-full' as='li' key={index}>
+                        <Menu.Item onClick={() => {setProperty(property); setOpen(false)}} className='cursor=pointer hover:text-violet-700 transition ease-linear duration-200ms w-full' as='li' key={index}>
                             {property}
                         </Menu.Item>)})}
             </Menu.Items>

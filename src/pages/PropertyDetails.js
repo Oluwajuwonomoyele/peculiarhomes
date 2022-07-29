@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import {housesData} from '../data';
 
 import { BiBed, BiBath, BiArea } from 'react-icons/bi'
-import { useEffect } from 'react';
 
 
 const PropertyDetails = () => {

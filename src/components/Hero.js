@@ -4,7 +4,7 @@ import Typed from 'react-typed';
 
 const Hero = () => {
     return (  
-        <section className='pt-[84px]'>
+        <section className='pt-[68px]'>
             <div className="max-w-[1600px] mx-auto px-4 lg:px-0 lg:py-6 xl:pb-24 flex flex-col items-center lg:flex-row lg:gap-24 h-screen lg:h-auto" id='hero'>
                 <div className='flex flex-col gap-6 xl:ml-24 items-center lg:items-start text-center lg:text-left justify-center flex-1 relative z-20'>
                     <h1 className='text-5xl lg:text-6xl font-semibold leading-none'><span className='text-violet-700'>
