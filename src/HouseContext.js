@@ -39,7 +39,7 @@ const HouseContextProvider = ({children}) => {
 
         const maxPrice = parseInt(price.split(' ')[2])
 
-        const newHousees = houses.filter(house => {
+        const newHouses = housesData.filter(house => {
             const housePrice = parseInt(house.price)
 
             if(house.country === country && house.type === property && minPrice <= housePrice && maxPrice >= housePrice){
@@ -70,20 +70,20 @@ const HouseContextProvider = ({children}) => {
 
             if(!defaultSearch(country) && !defaultSearch(price) && defaultSearch(property)){
                 if(minPrice <= house.price && maxPrice >= house.price){
-                    return house
+                    return house.country === country
                 }
             }
 
             if(defaultSearch(country) && !defaultSearch(price) && !defaultSearch(property)){
                 if(minPrice <= house.price && maxPrice >= house.price){
-                    return house
+                    return house.type === property
                 }
             }
-        })
+        });
         
         setTimeout(() => {
-            setLoading(false)
-            return !newHousees.length ? setHouses([]) : setHouses(newHousees);
+            setLoading(false);
+            return !newHouses.length ? setHouses([]) : setHouses(newHouses);
         }, 1000)
     }
      
