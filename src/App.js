@@ -81,7 +81,7 @@ function App() {
                     <label htmlFor="email" className='text-sm text-gray-600'>Email address</label>
                     <p className='text-[12px] text-gray-500'>required</p>
                   </div>
-                  <input type="email" name='email' id='email'placeholder='Enter your email' className='my-2 border border-primary rounded-md w-full p-2' required/>
+                  <input type="email" name='email' id='email'placeholder='Enter your email' className='my-2 border border-primary rounded-md w-full p-2 focus:outline-secondary' required/>
                 </div>
                 <button type='submit' className='w-full text-center bg-secondary py-2 rounded-full text-white'>Continue</button>
               </form>

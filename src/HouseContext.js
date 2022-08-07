@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+
 import { housesData } from './data'
 
 export const HouseContext = createContext();
@@ -16,17 +17,21 @@ const HouseContextProvider = ({children}) => {
         const allCountries = houses.map(house => {
             return house.country
         });
+        
         const uniqueCountries = [ 'Location (any)', ...new Set(allCountries) ];
+
         setCountries(uniqueCountries);
-    }, [houses]);
+    }, []);
 
     useEffect(() => {
         const allProperties = houses.map(house => {
             return house.type
         });
+
         const uniqueProperties = [ 'Location (any)', ...new Set(allProperties) ];
+
         setProperties(uniqueProperties);
-    }, [houses])
+    }, [])
 
     const handleClick = () => {
         setLoading(true)
@@ -79,6 +84,8 @@ const HouseContextProvider = ({children}) => {
                     return house.type === property
                 }
             }
+
+            return this;
         });
         
         setTimeout(() => {
